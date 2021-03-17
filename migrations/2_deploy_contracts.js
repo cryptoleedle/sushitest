@@ -19,7 +19,7 @@ module.exports = async function(deployer, _network, accounts) {
     await deployer.deploy(ERC20, 'test1', 'TST1');
     const erc201 = await ERC20.deployed();
 
-      await deployer.deploy(ERC20, 'test2', 'TST2');
+    await deployer.deploy(ERC20, 'test2', 'TST2');
     const erc202 = await ERC20.deployed();
 
 
@@ -80,7 +80,7 @@ module.exports = async function(deployer, _network, accounts) {
     await deployer.deploy(ERC20, 'test1', 'TST1');
     const erc201 = await ERC20.deployed();
 
-      await deployer.deploy(ERC20, 'test2', 'TST2');
+    await deployer.deploy(ERC20, 'test2', 'TST2');
     const erc202 = await ERC20.deployed();
   //   await deployer.deploy(Factory, admin);
   //   const factory = await Factory.deployed();
