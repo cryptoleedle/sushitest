@@ -1,6 +1,6 @@
 const Factory = artifacts.require('uniswapv2/UniswapV2Factory.sol');
 const Router = artifacts.require('uniswapv2/UniswapV2Router02.sol');
-const XERC20 = artifacts.require('@openzeppelin/contracts/token/XERC20');
+//const XERC20 = artifacts.require('@openzeppelin/contracts/token/XERC20');
 const WETH = artifacts.require('WETH.sol');
 const MockERC20 = artifacts.require('MockERC20.sol');
 const SushiToken = artifacts.require('SushiToken.sol') 
@@ -18,11 +18,11 @@ module.exports = async function(deployer, _network, addresses) {
   await deployer.deploy(WETH);
   const weth = await WETH.deployed();
 
-  await deployer.deploy(XERC20, 'TEST1', 'TST1');
-  const erc201 = await ERC20.deploy();
+  // await deployer.deploy(XERC20, 'TEST1', 'TST1');
+  // const erc201 = await ERC20.deploy();
 
-  await deployer.deploy(XERC20, 'TEST2', 'TST2');
-  const erc202 = await ERC20.deploy();
+  // await deployer.deploy(XERC20, 'TEST2', 'TST2');
+  // const erc202 = await ERC20.deploy();
 
   const tokenA = await MockERC20.new('Token A', 'TKA', web3.utils.toWei('1000'));
   const tokenB = await MockERC20.new('Token B', 'TKB', web3.utils.toWei('1000'));
