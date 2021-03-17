@@ -9,8 +9,11 @@ const SushiMaker = artifacts.require('SushiMaker.sol');
 const Migrator = artifacts.require('Migrator.sol');
 
 module.exports = async function(deployer, _network, addresses) {
-  const [admin, _] = addresses;
-
+  if (_network == 'ropsten') {
+    const admin = '0x420Dab420c5Fd0C067C4b8007448F0256abe2006';
+  } else {
+    const [admin, _] = addresses;
+  };
   await deployer.deploy(WETH);
   const weth = await WETH.deployed();
   const tokenA = await MockERC20.new('Token A', 'TKA', web3.utils.toWei('1000'));
