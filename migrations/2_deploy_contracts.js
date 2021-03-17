@@ -67,8 +67,6 @@ module.exports = async function(deployer, _network, accounts) {
 
 
   } else {
-
-
     const admin = accounts[0];
   //   //const weth = '0x0a180a76e4466bf68a7f86fb029bed3cccfaaac5';
   //   await deployer.deploy(WETH);
@@ -133,4 +131,5 @@ module.exports = async function(deployer, _network, accounts) {
 //   //   factory.address,
 //   //   1
 //   // );
-};
+  };
+}
